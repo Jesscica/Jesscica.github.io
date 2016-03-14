@@ -4,13 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | zehui blog</title>
+    <title>谈谈css自适应布局 | zehui blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Jesscica">
     
-    <meta name="description" content="谈谈css自适应布局
-今天想来写这个完全是因为树莓第一次给了个作业，哈哈，以前都是做东西，这次好不容易整合一下就想说记录下来。
+    <meta name="description" content="今天想来写这个完全是因为树莓第一次给了个作业，哈哈，以前都是做东西，这次好不容易整合一下就想说记录下来。
 先来说说布局的几种情况
 
 左边固定，右边自适应
@@ -19,7 +18,8 @@
 
 
 &amp;lt;html&amp;gt;
-    &amp;lt;head&amp;gt;&amp;lt;/he">
+    &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
+    ">
     
     
     
@@ -75,7 +75,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/03/14/树莓/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2016/03/14/树莓/" title="谈谈css自适应布局" itemprop="url">谈谈css自适应布局</a>
   </h1>
   <p class="article-author">By
     
@@ -83,7 +83,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-03-14T02:31:49.000Z" itemprop="datePublished">2016-03-14</time>
-    更新日期:<time datetime="2016-03-14T02:51:54.000Z" itemprop="dateModified">2016-03-14</time>
+    更新日期:<time datetime="2016-03-14T02:52:36.000Z" itemprop="dateModified">2016-03-14</time>
     
   </p>
 </header>
@@ -92,11 +92,10 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8C08_u8C08css_u81EA_u9002_u5E94_u5E03_u5C40"><span class="toc-number">1.</span> <span class="toc-text">谈谈css自适应布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5148_u6765_u8BF4_u8BF4_u5E03_u5C40_u7684_u51E0_u79CD_u60C5_u51B5"><span class="toc-number">1.0.1.</span> <span class="toc-text">先来说说布局的几种情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E24_u5217_u5E03_u5C40"><span class="toc-number">1.1.</span> <span class="toc-text">两列布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-_u4E00_u8FB9_u56FA_u5B9A_u5BBD_u5EA6_uFF0C_u5E76_u6D6E_u52A8_uFF0C_u53E6_u4E00_u8FB9_u8BBEmargin"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">1.一边固定宽度，并浮动，另一边设margin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-_u4E00_u8FB9_u6D6E_u52A8_uFF0C_u4E00_u8FB9_u8BBE_u7F6Eoverflow_3Ahidden"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">2.一边浮动，一边设置overflow:hidden</span></a></li></ol></li></ol></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5148_u6765_u8BF4_u8BF4_u5E03_u5C40_u7684_u51E0_u79CD_u60C5_u51B5"><span class="toc-number">1.</span> <span class="toc-text">先来说说布局的几种情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E24_u5217_u5E03_u5C40"><span class="toc-number"></span> <span class="toc-text">两列布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-_u4E00_u8FB9_u56FA_u5B9A_u5BBD_u5EA6_uFF0C_u5E76_u6D6E_u52A8_uFF0C_u53E6_u4E00_u8FB9_u8BBEmargin"><span class="toc-number">0.1.</span> <span class="toc-text">1.一边固定宽度，并浮动，另一边设margin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-_u4E00_u8FB9_u6D6E_u52A8_uFF0C_u4E00_u8FB9_u8BBE_u7F6Eoverflow_3Ahidden"><span class="toc-number">0.2.</span> <span class="toc-text">2.一边浮动，一边设置overflow:hidden</span></a></li></ol></li></ol>
 		</div>
 		
-		<h1 id="u8C08_u8C08css_u81EA_u9002_u5E94_u5E03_u5C40"><a href="#u8C08_u8C08css_u81EA_u9002_u5E94_u5E03_u5C40" class="headerlink" title="谈谈css自适应布局"></a>谈谈css自适应布局</h1><hr>
-<p>今天想来写这个完全是因为树莓第一次给了个作业，哈哈，以前都是做东西，这次好不容易整合一下就想说记录下来。</p>
+		<p>今天想来写这个完全是因为树莓第一次给了个作业，哈哈，以前都是做东西，这次好不容易整合一下就想说记录下来。</p>
 <h3 id="u5148_u6765_u8BF4_u8BF4_u5E03_u5C40_u7684_u51E0_u79CD_u60C5_u51B5"><a href="#u5148_u6765_u8BF4_u8BF4_u5E03_u5C40_u7684_u51E0_u79CD_u60C5_u51B5" class="headerlink" title="先来说说布局的几种情况"></a>先来说说布局的几种情况</h3><blockquote>
 <ul>
 <li>左边固定，右边自适应</li>
@@ -139,7 +138,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/03/14/树莓/" data-title="Hello World | zehui blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/03/14/树莓/" data-title="谈谈css自适应布局 | zehui blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -165,7 +164,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8C08_u8C08css_u81EA_u9002_u5E94_u5E03_u5C40"><span class="toc-number">1.</span> <span class="toc-text">谈谈css自适应布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5148_u6765_u8BF4_u8BF4_u5E03_u5C40_u7684_u51E0_u79CD_u60C5_u51B5"><span class="toc-number">1.0.1.</span> <span class="toc-text">先来说说布局的几种情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E24_u5217_u5E03_u5C40"><span class="toc-number">1.1.</span> <span class="toc-text">两列布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-_u4E00_u8FB9_u56FA_u5B9A_u5BBD_u5EA6_uFF0C_u5E76_u6D6E_u52A8_uFF0C_u53E6_u4E00_u8FB9_u8BBEmargin"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">1.一边固定宽度，并浮动，另一边设margin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-_u4E00_u8FB9_u6D6E_u52A8_uFF0C_u4E00_u8FB9_u8BBE_u7F6Eoverflow_3Ahidden"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">2.一边浮动，一边设置overflow:hidden</span></a></li></ol></li></ol></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5148_u6765_u8BF4_u8BF4_u5E03_u5C40_u7684_u51E0_u79CD_u60C5_u51B5"><span class="toc-number">1.</span> <span class="toc-text">先来说说布局的几种情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E24_u5217_u5E03_u5C40"><span class="toc-number"></span> <span class="toc-text">两列布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-_u4E00_u8FB9_u56FA_u5B9A_u5BBD_u5EA6_uFF0C_u5E76_u6D6E_u52A8_uFF0C_u53E6_u4E00_u8FB9_u8BBEmargin"><span class="toc-number">0.1.</span> <span class="toc-text">1.一边固定宽度，并浮动，另一边设margin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-_u4E00_u8FB9_u6D6E_u52A8_uFF0C_u4E00_u8FB9_u8BBE_u7F6Eoverflow_3Ahidden"><span class="toc-number">0.2.</span> <span class="toc-text">2.一边浮动，一边设置overflow:hidden</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
