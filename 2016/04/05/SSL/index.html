@@ -10,7 +10,9 @@
     <meta name="author" content="Jesscica">
     
     <meta name="description" content="确认服务器端
-1. 客户端：clientHelloClient hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。http://pic002.cnblogs.com/images/2012/38542/2012">
+1. 客户端：clientHelloClient hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。
+　　(1)Version(版本)：客户端能够用的SSL最高版本。
+　　(2)Random(随机">
     
     
     
@@ -74,7 +76,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-04-05T07:42:11.000Z" itemprop="datePublished">2016-04-05</time>
-    Updated:<time datetime="2016-04-05T12:14:30.000Z" itemprop="dateModified">2016-04-05</time>
+    Updated:<time datetime="2016-04-05T12:20:23.000Z" itemprop="dateModified">2016-04-05</time>
     
   </p>
 </header>
@@ -87,7 +89,7 @@
 		</div>
 		
 		<h3 id="u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><a href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF" class="headerlink" title="确认服务器端"></a>确认服务器端</h3><hr>
-<h4 id="1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><a href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello" class="headerlink" title="1. 客户端：clientHello"></a>1. 客户端：clientHello</h4><p>Client hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。<br><a href="http://pic002.cnblogs.com/images/2012/38542/2012100612260747.png" target="_blank" rel="external">http://pic002.cnblogs.com/images/2012/38542/2012100612260747.png</a></p>
+<h4 id="1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><a href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello" class="headerlink" title="1. 客户端：clientHello"></a>1. 客户端：clientHello</h4><p>Client hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。<br><img src="/./images/1459835755839.png" alt="enter description here" title="1459835755839.png"></p>
 <p>　　(1)Version(版本)：客户端能够用的SSL最高版本。</p>
 <p>　　(2)Random(随机值)：包含一个32位长的时间戳，以及一个由随机数产生器所产生的28字节长的数字。</p>
 <p>　　(3)Session ID(会话标识符)：不定长度的session识别码。如果Session ID字段填上任何非零的数值，就表示客户端想继续使用上一个SSL连接，并且更新此连接的参数，或者在目前的session产生一个新的连接。如果此字段的值为零，则表示客户端希望重新建立一个新的session，并且产生一个新的连接。</p>
@@ -106,9 +108,9 @@
 <p>　　(4)Anonymous Diffie-Hellman：基本上使用Diffie-Hellman算法，但是不经过认证。也就是说，双方都会将自己的Diffie-Hellman公开参数在没有经过认证的程序下，直接传送给对方。这个方式很有可能受到中间人攻击(man-in-the-middle<br>attack)，攻击者可以向双方发起匿名的Diffie-Hellman交换攻击。</p>
 <p>　　(5)Fortezza：在Fortezza架构中所定义的方法。</p>
 </blockquote>
-<h4 id="3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587"><a href="#3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587" class="headerlink" title="3. 服务器： Certificate报文"></a>3. 服务器： Certificate报文</h4><p>发送公开密匙和证书，可能带有证书请求（客户端证书）<br>接着，假如有需要的话，服务器会送出server_key_exchange消息。在下面的两种情况下，服务器不需要送出这个消息：服务器已经送出包含fixed Diffie-Hellman参数的证书；使用RSA密钥交换算法。<br> <img src="/./images/1459836522830.jpg" alt="enter description here" title="1459836522830.jpg"></p>
+<h4 id="3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587"><a href="#3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587" class="headerlink" title="3. 服务器： Certificate报文"></a>3. 服务器： Certificate报文</h4><p>发送公开密匙和证书，可能带有证书请求（客户端证书）<br>接着，假如有需要的话，服务器会送出server_key_exchange消息。在下面的两种情况下，服务器不需要送出这个消息：服务器已经送出包含fixed Diffie-Hellman参数的证书；使用RSA密钥交换算法。<br> <img src="/./images/1459836522830.png" alt="enter description here" title="1459836522830.png"></p>
 <h4 id="4-__u670D_u52A1_u5668_uFF1A_server_Hello_Done"><a href="#4-__u670D_u52A1_u5668_uFF1A_server_Hello_Done" class="headerlink" title="4. 服务器： server Hello Done"></a>4. 服务器： server Hello Done</h4><h3 id="u786E_u8BA4_u5BA2_u6237_u7AEF"><a href="#u786E_u8BA4_u5BA2_u6237_u7AEF" class="headerlink" title="确认客户端"></a>确认客户端</h3><hr>
-<p><img src="/./images/1459836554308.jpg" alt="enter description here" title="1459836554308.jpg"></p>
+<p><img src="/./images/1459836554308.png" alt="enter description here" title="1459836554308.png"></p>
 <h4 id="5-__u5BA2_u6237_u7AEF_uFF1Aclient_key_change_u62A5_u6587"><a href="#5-__u5BA2_u6237_u7AEF_uFF1Aclient_key_change_u62A5_u6587" class="headerlink" title="5. 客户端：client key change报文"></a>5. 客户端：client key change报文</h4><p> （内容则要看客户端所选定的公开密钥算法类型而定）</p>
 <p><em>此处仅举例RSA</em></p>
 <p> 此消息包含 pre-master secret（一个用在对称加密密钥生成中的 46 字节的随机数字），和 消息认证代码（ MAC ）密钥（用服务器的公用密钥加密的）。</p>
@@ -116,10 +118,10 @@
 <p>MAC报文摘要–能够查知报文是否遭到篡改，从而保护报文的完整性。</p>
 <h4 id="6-__u5BA2_u6237_u7AEF_uFF1AChange_Cipher_Spec_u62A5_u6587"><a href="#6-__u5BA2_u6237_u7AEF_uFF1AChange_Cipher_Spec_u62A5_u6587" class="headerlink" title="6. 客户端：Change Cipher Spec报文"></a>6. 客户端：Change Cipher Spec报文</h4><h4 id="7-__u5BA2_u6237_u7AEF_uFF1Afinished_u62A5_u6587"><a href="#7-__u5BA2_u6237_u7AEF_uFF1Afinished_u62A5_u6587" class="headerlink" title="7. 客户端：finished报文"></a>7. 客户端：finished报文</h4><p>　此次握手协商能否成功，要看服务器是否能正确解密此报文。
 　</p>
-<h4 id="8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587"><a href="#8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587" class="headerlink" title="8.服务器：Change Cipher Spec报文"></a>8.服务器：Change Cipher Spec报文</h4><h4 id="9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587"><a href="#9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587" class="headerlink" title="9.服务器：finished报文"></a>9.服务器：finished报文</h4><p><img src="/./images/1459842016046.jpg" alt="enter description here" title="1459842016046.jpg"></p>
+<h4 id="8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587"><a href="#8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587" class="headerlink" title="8.服务器：Change Cipher Spec报文"></a>8.服务器：Change Cipher Spec报文</h4><h4 id="9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587"><a href="#9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587" class="headerlink" title="9.服务器：finished报文"></a>9.服务器：finished报文</h4><p><img src="/./images/1459842016046.png" alt="enter description here" title="1459842016046.png"></p>
 <h3 id="u603B_u7684_u6982_u8FF0"><a href="#u603B_u7684_u6982_u8FF0" class="headerlink" title="总的概述"></a>总的概述</h3><hr>
 <blockquote>
-<p><img src="/./images/1459836962431.jpg" alt="enter description here" title="1459836962431.jpg"></p>
+<p><img src="/./images/1459836962431.png" alt="enter description here" title="1459836962431.png"></p>
 </blockquote>
 <h3 id="SSL_u8FDE_u63A5_u5B8C_u6210_u3002_u4ECE_u6B64_u5F00_u59CBhttp_u8BF7_u6C42_u3002"><a href="#SSL_u8FDE_u63A5_u5B8C_u6210_u3002_u4ECE_u6B64_u5F00_u59CBhttp_u8BF7_u6C42_u3002" class="headerlink" title="SSL连接完成。从此开始http请求。"></a>SSL连接完成。从此开始http请求。</h3>  
 	</div>
