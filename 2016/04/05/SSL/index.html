@@ -9,7 +9,8 @@
     
     <meta name="author" content="Jesscica">
     
-    <meta name="description" content="确认服务器端 1. 客户端：clientHelloClient hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。
+    <meta name="description" content="确认服务器端
+1. 客户端：clientHelloClient hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。
 　　(1)Version(版本)：客户端能够用的SSL最高版本。
 　　(2)Random(随机">
     
@@ -75,7 +76,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-04-05T07:42:11.000Z" itemprop="datePublished">2016-04-05</time>
-    Updated:<time datetime="2016-04-05T12:09:25.000Z" itemprop="dateModified">2016-04-05</time>
+    Updated:<time datetime="2016-04-05T12:12:31.000Z" itemprop="dateModified">2016-04-05</time>
     
   </p>
 </header>
@@ -84,16 +85,17 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><span class="toc-number">1.</span> <span class="toc-text">确认服务器端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u786E_u8BA4_u5BA2_u6237_u7AEF"><span class="toc-number">2.</span> <span class="toc-text">确认客户端</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><span class="toc-number">1.</span> <span class="toc-text">确认服务器端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><span class="toc-number">1.1.</span> <span class="toc-text">1. 客户端：clientHello</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-__u670D_u52A1_u5668_uFF1ASever_Hello"><span class="toc-number">1.2.</span> <span class="toc-text">2. 服务器：Sever Hello</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587"><span class="toc-number">1.3.</span> <span class="toc-text">3. 服务器： Certificate报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-__u670D_u52A1_u5668_uFF1A_server_Hello_Done"><span class="toc-number">1.4.</span> <span class="toc-text">4. 服务器： server Hello Done</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u786E_u8BA4_u5BA2_u6237_u7AEF"><span class="toc-number">2.</span> <span class="toc-text">确认客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-__u5BA2_u6237_u7AEF_uFF1Aclient_key_change_u62A5_u6587"><span class="toc-number">2.1.</span> <span class="toc-text">5. 客户端：client key change报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-__u5BA2_u6237_u7AEF_uFF1AChange_Cipher_Spec_u62A5_u6587"><span class="toc-number">2.2.</span> <span class="toc-text">6. 客户端：Change Cipher Spec报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-__u5BA2_u6237_u7AEF_uFF1Afinished_u62A5_u6587"><span class="toc-number">2.3.</span> <span class="toc-text">7. 客户端：finished报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587"><span class="toc-number">2.4.</span> <span class="toc-text">8.服务器：Change Cipher Spec报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587"><span class="toc-number">2.5.</span> <span class="toc-text">9.服务器：finished报文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u603B_u7684_u6982_u8FF0"><span class="toc-number">3.</span> <span class="toc-text">总的概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSL_u8FDE_u63A5_u5B8C_u6210_u3002_u4ECE_u6B64_u5F00_u59CBhttp_u8BF7_u6C42_u3002"><span class="toc-number">4.</span> <span class="toc-text">SSL连接完成。从此开始http请求。</span></a></li></ol>
 		</div>
 		
-		<h2 id="u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><a href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF" class="headerlink" title="确认服务器端"></a>确认服务器端</h2><p> <strong>1. 客户端：clientHello</strong><br>Client hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。<br><img src="/./images/1459835755839.jpg" alt="enter description here" title="1459835755839.jpg"></p>
+		<h3 id="u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><a href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF" class="headerlink" title="确认服务器端"></a>确认服务器端</h3><hr>
+<h4 id="1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><a href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello" class="headerlink" title="1. 客户端：clientHello"></a>1. 客户端：clientHello</h4><p>Client hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。<br><img src="/./images/1459835755839.jpg" alt="enter description here" title="1459835755839.jpg"></p>
 <p>　　(1)Version(版本)：客户端能够用的SSL最高版本。</p>
 <p>　　(2)Random(随机值)：包含一个32位长的时间戳，以及一个由随机数产生器所产生的28字节长的数字。</p>
 <p>　　(3)Session ID(会话标识符)：不定长度的session识别码。如果Session ID字段填上任何非零的数值，就表示客户端想继续使用上一个SSL连接，并且更新此连接的参数，或者在目前的session产生一个新的连接。如果此字段的值为零，则表示客户端希望重新建立一个新的session，并且产生一个新的连接。</p>
 <p>　　(4)CipherSuit(密码套件)：客户端能够支持的加密算法列表。</p>
 <p>　　(5)Compression Methods(压缩算法)：客户端能够支持的压缩算法列表。</p>
-<p> <strong>2. 服务器：Sever Hello</strong><br> 表示已知clienthello内容</p>
+<h4 id="2-__u670D_u52A1_u5668_uFF1ASever_Hello"><a href="#2-__u670D_u52A1_u5668_uFF1ASever_Hello" class="headerlink" title="2. 服务器：Sever Hello"></a>2. 服务器：Sever Hello</h4><p> 表示已知clienthello内容</p>
 <p>　　(1)Version：服务器允许客户端使用的SSL版本。这个版本为客户端以及服务器双方都能支持的最高版本。</p>
 <p>　　(2)Random：由服务器所产生的随机结构。与客户端所产生的随机结构类似，但彼此独立。</p>
 <p>　　(3)Session ID：假如客户端传送过来的Session ID字段为非零的数值，那么服务器会将这个字段的值设定成客户端所指定的Session ID。否则服务器将会提供客户端新的会话，并为此字段填上代表这个新会话的标识符。</p>
@@ -106,21 +108,22 @@
 <p>　　(4)Anonymous Diffie-Hellman：基本上使用Diffie-Hellman算法，但是不经过认证。也就是说，双方都会将自己的Diffie-Hellman公开参数在没有经过认证的程序下，直接传送给对方。这个方式很有可能受到中间人攻击(man-in-the-middle<br>attack)，攻击者可以向双方发起匿名的Diffie-Hellman交换攻击。</p>
 <p>　　(5)Fortezza：在Fortezza架构中所定义的方法。</p>
 </blockquote>
-<p> <strong>3. 服务器： Certificate报文</strong><br>发送公开密匙和证书，可能带有证书请求（客户端证书）<br>接着，假如有需要的话，服务器会送出server_key_exchange消息。在下面的两种情况下，服务器不需要送出这个消息：服务器已经送出包含fixed Diffie-Hellman参数的证书；使用RSA密钥交换算法。<br> <img src="/./images/1459836522830.jpg" alt="enter description here" title="1459836522830.jpg"></p>
-<p> <strong>4. 服务器： server Hello Done</strong></p>
-<h2 id="u786E_u8BA4_u5BA2_u6237_u7AEF"><a href="#u786E_u8BA4_u5BA2_u6237_u7AEF" class="headerlink" title="确认客户端"></a>确认客户端</h2><p><img src="/./images/1459836554308.jpg" alt="enter description here" title="1459836554308.jpg"><br> <strong>5. 客户端：client key change报文<br> （内容则要看客户端所选定的公开密钥算法类型而定）</strong></p>
+<h4 id="3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587"><a href="#3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587" class="headerlink" title="3. 服务器： Certificate报文"></a>3. 服务器： Certificate报文</h4><p>发送公开密匙和证书，可能带有证书请求（客户端证书）<br>接着，假如有需要的话，服务器会送出server_key_exchange消息。在下面的两种情况下，服务器不需要送出这个消息：服务器已经送出包含fixed Diffie-Hellman参数的证书；使用RSA密钥交换算法。<br> <img src="/./images/1459836522830.jpg" alt="enter description here" title="1459836522830.jpg"></p>
+<h4 id="4-__u670D_u52A1_u5668_uFF1A_server_Hello_Done"><a href="#4-__u670D_u52A1_u5668_uFF1A_server_Hello_Done" class="headerlink" title="4. 服务器： server Hello Done"></a>4. 服务器： server Hello Done</h4><h3 id="u786E_u8BA4_u5BA2_u6237_u7AEF"><a href="#u786E_u8BA4_u5BA2_u6237_u7AEF" class="headerlink" title="确认客户端"></a>确认客户端</h3><hr>
+<p><img src="/./images/1459836554308.jpg" alt="enter description here" title="1459836554308.jpg"></p>
+<h4 id="5-__u5BA2_u6237_u7AEF_uFF1Aclient_key_change_u62A5_u6587"><a href="#5-__u5BA2_u6237_u7AEF_uFF1Aclient_key_change_u62A5_u6587" class="headerlink" title="5. 客户端：client key change报文"></a>5. 客户端：client key change报文</h4><p> （内容则要看客户端所选定的公开密钥算法类型而定）</p>
 <p><em>此处仅举例RSA</em></p>
 <p> 此消息包含 pre-master secret（一个用在对称加密密钥生成中的 46 字节的随机数字），和 消息认证代码（ MAC ）密钥（用服务器的公用密钥加密的）。</p>
 <p>客户端先产生一个48B长的Pre-master-secret随机密码串。然后，若服务器提供其他的证书，则利用此证书内的公开密钥(步骤3)将此密钥加密，不然就用server_key_exchange消息中携带的暂时性RSA密钥来加密。这个“预先的”密钥能够用来产生master-secret。</p>
 <p>MAC报文摘要–能够查知报文是否遭到篡改，从而保护报文的完整性。</p>
-<p>　<strong>6. 客户端：Change Cipher Spec报文</strong></p>
-<p>　<strong>7. 客户端：finished报文</strong><br>　此次握手协商能否成功，要看服务器是否能正确解密此报文。<br>　<br>　<strong>8.服务器：Change Cipher Spec报文</strong><br>　<strong>9.服务器：finished报文</strong><br><img src="/./images/1459842016046.jpg" alt="enter description here" title="1459842016046.jpg"></p>
+<h4 id="6-__u5BA2_u6237_u7AEF_uFF1AChange_Cipher_Spec_u62A5_u6587"><a href="#6-__u5BA2_u6237_u7AEF_uFF1AChange_Cipher_Spec_u62A5_u6587" class="headerlink" title="6. 客户端：Change Cipher Spec报文"></a>6. 客户端：Change Cipher Spec报文</h4><h4 id="7-__u5BA2_u6237_u7AEF_uFF1Afinished_u62A5_u6587"><a href="#7-__u5BA2_u6237_u7AEF_uFF1Afinished_u62A5_u6587" class="headerlink" title="7. 客户端：finished报文"></a>7. 客户端：finished报文</h4><p>　此次握手协商能否成功，要看服务器是否能正确解密此报文。
+　</p>
+<h4 id="8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587"><a href="#8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587" class="headerlink" title="8.服务器：Change Cipher Spec报文"></a>8.服务器：Change Cipher Spec报文</h4><h4 id="9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587"><a href="#9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587" class="headerlink" title="9.服务器：finished报文"></a>9.服务器：finished报文</h4><p><img src="/./images/1459842016046.jpg" alt="enter description here" title="1459842016046.jpg"></p>
+<h3 id="u603B_u7684_u6982_u8FF0"><a href="#u603B_u7684_u6982_u8FF0" class="headerlink" title="总的概述"></a>总的概述</h3><hr>
 <blockquote>
-<p><em>总的概述</em></p>
 <p><img src="/./images/1459836962431.jpg" alt="enter description here" title="1459836962431.jpg"></p>
 </blockquote>
-<p>SSL连接完成。从此开始http请求。</p>
-  
+<h3 id="SSL_u8FDE_u63A5_u5B8C_u6210_u3002_u4ECE_u6B64_u5F00_u59CBhttp_u8BF7_u6C42_u3002"><a href="#SSL_u8FDE_u63A5_u5B8C_u6210_u3002_u4ECE_u6B64_u5F00_u59CBhttp_u8BF7_u6C42_u3002" class="headerlink" title="SSL连接完成。从此开始http请求。"></a>SSL连接完成。从此开始http请求。</h3>  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -160,7 +163,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><span class="toc-number">1.</span> <span class="toc-text">确认服务器端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u786E_u8BA4_u5BA2_u6237_u7AEF"><span class="toc-number">2.</span> <span class="toc-text">确认客户端</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><span class="toc-number">1.</span> <span class="toc-text">确认服务器端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><span class="toc-number">1.1.</span> <span class="toc-text">1. 客户端：clientHello</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-__u670D_u52A1_u5668_uFF1ASever_Hello"><span class="toc-number">1.2.</span> <span class="toc-text">2. 服务器：Sever Hello</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587"><span class="toc-number">1.3.</span> <span class="toc-text">3. 服务器： Certificate报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-__u670D_u52A1_u5668_uFF1A_server_Hello_Done"><span class="toc-number">1.4.</span> <span class="toc-text">4. 服务器： server Hello Done</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u786E_u8BA4_u5BA2_u6237_u7AEF"><span class="toc-number">2.</span> <span class="toc-text">确认客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-__u5BA2_u6237_u7AEF_uFF1Aclient_key_change_u62A5_u6587"><span class="toc-number">2.1.</span> <span class="toc-text">5. 客户端：client key change报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-__u5BA2_u6237_u7AEF_uFF1AChange_Cipher_Spec_u62A5_u6587"><span class="toc-number">2.2.</span> <span class="toc-text">6. 客户端：Change Cipher Spec报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-__u5BA2_u6237_u7AEF_uFF1Afinished_u62A5_u6587"><span class="toc-number">2.3.</span> <span class="toc-text">7. 客户端：finished报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587"><span class="toc-number">2.4.</span> <span class="toc-text">8.服务器：Change Cipher Spec报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587"><span class="toc-number">2.5.</span> <span class="toc-text">9.服务器：finished报文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u603B_u7684_u6982_u8FF0"><span class="toc-number">3.</span> <span class="toc-text">总的概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSL_u8FDE_u63A5_u5B8C_u6210_u3002_u4ECE_u6B64_u5F00_u59CBhttp_u8BF7_u6C42_u3002"><span class="toc-number">4.</span> <span class="toc-text">SSL连接完成。从此开始http请求。</span></a></li></ol>
   </div>
 
 <div id="asidepart">
