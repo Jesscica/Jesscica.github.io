@@ -9,8 +9,9 @@
     
     <meta name="author" content="Jesscica">
     
-    <meta name="description" content="ȷ�Ϸ������� 1. �ͻ��ˣ�clientHelloClient hello��Ϣ����Version��Random��Session id��Cipher suite��Compression method����Ϣ��
-����(1)Version(�汾)���ͻ����ܹ��õ�">
+    <meta name="description" content="确认服务器端 1. 客户端：clientHelloClient hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。
+　　(1)Version(版本)：客户端能够用的SSL最高版本。
+　　(2)Random(随机">
     
     
     
@@ -74,7 +75,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-04-05T07:42:11.000Z" itemprop="datePublished">2016-04-05</time>
-    Updated:<time datetime="2016-04-05T12:05:47.000Z" itemprop="dateModified">2016-04-05</time>
+    Updated:<time datetime="2016-04-05T12:09:25.000Z" itemprop="dateModified">2016-04-05</time>
     
   </p>
 </header>
@@ -83,42 +84,42 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u0237_uFFFD_u03F7_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD"><span class="toc-number">1.</span> <span class="toc-text">ȷ�Ϸ�������</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u0237_uFFFD_u03FF_u037B_uFFFD_uFFFD_uFFFD"><span class="toc-number">2.</span> <span class="toc-text">ȷ�Ͽͻ���</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><span class="toc-number">1.</span> <span class="toc-text">确认服务器端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u786E_u8BA4_u5BA2_u6237_u7AEF"><span class="toc-number">2.</span> <span class="toc-text">确认客户端</span></a></li></ol>
 		</div>
 		
-		<h2 id="u0237_uFFFD_u03F7_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD"><a href="#u0237_uFFFD_u03F7_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD" class="headerlink" title="ȷ�Ϸ�������"></a>ȷ�Ϸ�������</h2><p> <strong>1. �ͻ��ˣ�clientHello</strong><br>Client hello��Ϣ����Version��Random��Session id��Cipher suite��Compression method����Ϣ��<br><img src="/./images/1459835755839.jpg" alt="enter description here" title="1459835755839.jpg"></p>
-<p>����(1)Version(�汾)���ͻ����ܹ��õ�SSL���߰汾��</p>
-<p>����(2)Random(����ֵ)������һ��32λ����ʱ�������Լ�һ������������������������28�ֽڳ������֡�</p>
-<p>����(3)Session ID(�Ự��ʶ��)���������ȵ�sessionʶ���롣����Session ID�ֶ������κη�������ֵ���ͱ�ʾ�ͻ���������ʹ����һ��SSL���ӣ����Ҹ��´����ӵĲ�����������Ŀǰ��session����һ���µ����ӡ��������ֶε�ֵΪ�㣬����ʾ�ͻ���ϣ�����½���һ���µ�session�����Ҳ���һ���µ����ӡ�</p>
-<p>����(4)CipherSuit(�����׼�)���ͻ����ܹ�֧�ֵļ����㷨�б���</p>
-<p>����(5)Compression Methods(ѹ���㷨)���ͻ����ܹ�֧�ֵ�ѹ���㷨�б���</p>
-<p> <strong>2. ��������Sever Hello</strong><br> ��ʾ��֪clienthello����</p>
-<p>����(1)Version�������������ͻ���ʹ�õ�SSL�汾�������汾Ϊ�ͻ����Լ�������˫������֧�ֵ����߰汾��</p>
-<p>����(2)Random���ɷ������������������ṹ�����ͻ����������������ṹ���ƣ����˴˶�����</p>
-<p>����(3)Session ID�������ͻ��˴��͹�����Session ID�ֶ�Ϊ��������ֵ����ô�������Ὣ�����ֶε�ֵ�趨�ɿͻ�����ָ����Session ID�����������󽫻��ṩ�ͻ����µĻỰ����Ϊ���ֶ����ϴ��������»Ự�ı�ʶ����</p>
-<p>����(4)CipherSuit���������ӿͻ������ṩ�������׼��б��������ļ����㷨���ϡ�</p>
-<p>����(5)Compression Method���������ӿͻ������ṩ��ѹ�񷽷��б��������ķ����������׼������������ĵ�һ��Ԫ��Ϊ��Կ�������㷨(��ͳ�����Լ�������Ϣ��֤��ʱ�����õ�����Կ�Ľ�����ʽ)�������¼����ṩ����Կ�����㷨��</p>
+		<h2 id="u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><a href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF" class="headerlink" title="确认服务器端"></a>确认服务器端</h2><p> <strong>1. 客户端：clientHello</strong><br>Client hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。<br><img src="/./images/1459835755839.jpg" alt="enter description here" title="1459835755839.jpg"></p>
+<p>　　(1)Version(版本)：客户端能够用的SSL最高版本。</p>
+<p>　　(2)Random(随机值)：包含一个32位长的时间戳，以及一个由随机数产生器所产生的28字节长的数字。</p>
+<p>　　(3)Session ID(会话标识符)：不定长度的session识别码。如果Session ID字段填上任何非零的数值，就表示客户端想继续使用上一个SSL连接，并且更新此连接的参数，或者在目前的session产生一个新的连接。如果此字段的值为零，则表示客户端希望重新建立一个新的session，并且产生一个新的连接。</p>
+<p>　　(4)CipherSuit(密码套件)：客户端能够支持的加密算法列表。</p>
+<p>　　(5)Compression Methods(压缩算法)：客户端能够支持的压缩算法列表。</p>
+<p> <strong>2. 服务器：Sever Hello</strong><br> 表示已知clienthello内容</p>
+<p>　　(1)Version：服务器允许客户端使用的SSL版本。这个版本为客户端以及服务器双方都能支持的最高版本。</p>
+<p>　　(2)Random：由服务器所产生的随机结构。与客户端所产生的随机结构类似，但彼此独立。</p>
+<p>　　(3)Session ID：假如客户端传送过来的Session ID字段为非零的数值，那么服务器会将这个字段的值设定成客户端所指定的Session ID。否则服务器将会提供客户端新的会话，并为此字段填上代表这个新会话的标识符。</p>
+<p>　　(4)CipherSuit：服务器从客户端所提供的密码套件列表中挑出的加密算法组合。</p>
+<p>　　(5)Compression Method：服务器从客户端所提供的压缩方法列表中挑出的方法。密码套件参数所包含的第一个元素为密钥交换的算法(传统加密以及计算消息认证码时所会用到的密钥的交换方式)。有以下几种提供的密钥交换算法。</p>
 <blockquote>
-<p>����(1)RSA���ɽ��ն˵Ĺ�����Կ������Կ����������Ϊ�����ȵ�֪���ն˵Ĺ�����Կ���乫����Կ��֤������Ҫ���÷��Ͷ�ȡ�á�</p>
-<p>����(2)Fixed Diffie-Hellman��Diffie-Hellman<br>��Կ����������������֤���л���������֤����ǩ������Diffie-Hellman������Կ������������Ҫ�Կͻ�������֤�����ͻ��˻ὫDiffie-Hellman������Կ����������֤���ڣ������ͻ��˻Ὣ��Щ����������Կ��������Ϣ�С������򷽷���ʹ�ù̶��Ĺ�����Կ����Diffie-Hellman�㷨��������˫���Ὠ����һ���̶�����Կ��</p>
-<p>����(3)Ephemeral-Diffie-Hellman�����򷽷��������������ݵ�(Ephemeral)��Կ��Diffie-Hellman������Կ�����ô�����˽��RSA��Կ������DSS��Կ����ǩ�𣬲��һ��ཻ��������������������ʹ�ö�Ӧ�Ĺ�����Կ���˶�����ǩ��������֮�⣬������Ҳ������֤����ȷ�Ϲ�����Կ����ʵ�ԣ��⽫����Diffie_Hellman����ѡ����ʽ���ȫ��һ�֣���Ϊ������������һ�Ѷ��ݲ��Ҿ�����֤����Կ��</p>
-<p>����(4)Anonymous Diffie-Hellman��������ʹ��Diffie-Hellman�㷨�����ǲ�������֤��Ҳ����˵��˫�����Ὣ�Լ���Diffie-Hellman����������û�о�����֤�ĳ����£�ֱ�Ӵ��͸��Է���������ʽ���п����ܵ��м��˹���(man-in-the-middle<br>attack)�������߿�����˫������������Diffie-Hellman����������</p>
-<p>����(5)Fortezza����Fortezza�ܹ����������ķ�����</p>
+<p>　　(1)RSA：由接收端的公开密钥来将密钥加密起来。为了事先得知接收端的公开密钥，其公开密钥的证书必须要能让发送端取得。</p>
+<p>　　(2)Fixed Diffie-Hellman：Diffie-Hellman<br>密钥交换法。服务器的证书中会包含经认证机构签署过的Diffie-Hellman公开密钥参数。假如需要对客户端做认证，则客户端会将Diffie-Hellman公开密钥参数包含在证书内，否则客户端会将这些参数放在密钥交换的消息中。由这个方法，使用固定的公开密钥经过Diffie-Hellman算法计算后，双方会建立起一个固定的密钥。</p>
+<p>　　(3)Ephemeral-Diffie-Hellman：这个方法是用来产生短暂的(Ephemeral)密钥。Diffie-Hellman公开密钥会利用传送者私人RSA密钥或者是DSS密钥来做签署，并且互相交换。而接收者随后便能使用对应的公开密钥来核对这个签名。除此之外，接收者也能利用证书来确认公开密钥的真实性，这将会是Diffie_Hellman三种选择方式中最安全的一种，因为它所产生的是一把短暂并且经过验证的密钥。</p>
+<p>　　(4)Anonymous Diffie-Hellman：基本上使用Diffie-Hellman算法，但是不经过认证。也就是说，双方都会将自己的Diffie-Hellman公开参数在没有经过认证的程序下，直接传送给对方。这个方式很有可能受到中间人攻击(man-in-the-middle<br>attack)，攻击者可以向双方发起匿名的Diffie-Hellman交换攻击。</p>
+<p>　　(5)Fortezza：在Fortezza架构中所定义的方法。</p>
 </blockquote>
-<p> <strong>3. �������� Certificate����</strong><br>���͹����ܳ׺�֤�飬���ܴ���֤�����󣨿ͻ���֤�飩<br>���ţ���������Ҫ�Ļ������������ͳ�server_key_exchange��Ϣ�������������������£�����������Ҫ�ͳ�������Ϣ���������Ѿ��ͳ�����fixed Diffie-Hellman������֤�飻ʹ��RSA��Կ�����㷨��<br> <img src="/./images/1459836522830.jpg" alt="enter description here" title="1459836522830.jpg"></p>
-<p> <strong>4. �������� server Hello Done</strong></p>
-<h2 id="u0237_uFFFD_u03FF_u037B_uFFFD_uFFFD_uFFFD"><a href="#u0237_uFFFD_u03FF_u037B_uFFFD_uFFFD_uFFFD" class="headerlink" title="ȷ�Ͽͻ���"></a>ȷ�Ͽͻ���</h2><p><img src="/./images/1459836554308.jpg" alt="enter description here" title="1459836554308.jpg"><br> <strong>5. �ͻ��ˣ�client key change����<br> ��������Ҫ���ͻ�����ѡ���Ĺ�����Կ�㷨���Ͷ�����</strong></p>
-<p><em>�˴�������RSA</em></p>
-<p> ����Ϣ���� pre-master secret��һ�����ڶԳƼ�����Կ�����е� 46 �ֽڵ��������֣����� ��Ϣ��֤���루 MAC ����Կ���÷������Ĺ�����Կ���ܵģ���</p>
-<p>�ͻ����Ȳ���һ��48B����Pre-master-secret�������봮��Ȼ�������������ṩ������֤�飬�����ô�֤���ڵĹ�����Կ(����3)������Կ���ܣ���Ȼ����server_key_exchange��Ϣ��Я������ʱ��RSA��Կ�����ܡ�������Ԥ�ȵġ���Կ�ܹ���������master-secret��</p>
-<p>MAC����ժҪ–�ܹ���֪�����Ƿ��⵽�۸ģ��Ӷ��������ĵ������ԡ�</p>
-<p>��<strong>6. �ͻ��ˣ�Change Cipher Spec����</strong></p>
-<p>��<strong>7. �ͻ��ˣ�finished����</strong><br>���˴�����Э���ܷ��ɹ���Ҫ���������Ƿ�����ȷ���ܴ˱��ġ�<br>��<br>��<strong>8.��������Change Cipher Spec����</strong><br>��<strong>9.��������finished����</strong><br><img src="/./images/1459842016046.jpg" alt="enter description here" title="1459842016046.jpg"></p>
+<p> <strong>3. 服务器： Certificate报文</strong><br>发送公开密匙和证书，可能带有证书请求（客户端证书）<br>接着，假如有需要的话，服务器会送出server_key_exchange消息。在下面的两种情况下，服务器不需要送出这个消息：服务器已经送出包含fixed Diffie-Hellman参数的证书；使用RSA密钥交换算法。<br> <img src="/./images/1459836522830.jpg" alt="enter description here" title="1459836522830.jpg"></p>
+<p> <strong>4. 服务器： server Hello Done</strong></p>
+<h2 id="u786E_u8BA4_u5BA2_u6237_u7AEF"><a href="#u786E_u8BA4_u5BA2_u6237_u7AEF" class="headerlink" title="确认客户端"></a>确认客户端</h2><p><img src="/./images/1459836554308.jpg" alt="enter description here" title="1459836554308.jpg"><br> <strong>5. 客户端：client key change报文<br> （内容则要看客户端所选定的公开密钥算法类型而定）</strong></p>
+<p><em>此处仅举例RSA</em></p>
+<p> 此消息包含 pre-master secret（一个用在对称加密密钥生成中的 46 字节的随机数字），和 消息认证代码（ MAC ）密钥（用服务器的公用密钥加密的）。</p>
+<p>客户端先产生一个48B长的Pre-master-secret随机密码串。然后，若服务器提供其他的证书，则利用此证书内的公开密钥(步骤3)将此密钥加密，不然就用server_key_exchange消息中携带的暂时性RSA密钥来加密。这个“预先的”密钥能够用来产生master-secret。</p>
+<p>MAC报文摘要–能够查知报文是否遭到篡改，从而保护报文的完整性。</p>
+<p>　<strong>6. 客户端：Change Cipher Spec报文</strong></p>
+<p>　<strong>7. 客户端：finished报文</strong><br>　此次握手协商能否成功，要看服务器是否能正确解密此报文。<br>　<br>　<strong>8.服务器：Change Cipher Spec报文</strong><br>　<strong>9.服务器：finished报文</strong><br><img src="/./images/1459842016046.jpg" alt="enter description here" title="1459842016046.jpg"></p>
 <blockquote>
-<p><em>�ܵĸ���</em></p>
+<p><em>总的概述</em></p>
 <p><img src="/./images/1459836962431.jpg" alt="enter description here" title="1459836962431.jpg"></p>
 </blockquote>
-<p>SSL�������ɡ��Ӵ˿�ʼhttp������</p>
+<p>SSL连接完成。从此开始http请求。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -159,7 +160,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u0237_uFFFD_u03F7_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD_uFFFD"><span class="toc-number">1.</span> <span class="toc-text">ȷ�Ϸ�������</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u0237_uFFFD_u03FF_u037B_uFFFD_uFFFD_uFFFD"><span class="toc-number">2.</span> <span class="toc-text">ȷ�Ͽͻ���</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><span class="toc-number">1.</span> <span class="toc-text">确认服务器端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u786E_u8BA4_u5BA2_u6237_u7AEF"><span class="toc-number">2.</span> <span class="toc-text">确认客户端</span></a></li></ol>
   </div>
 
 <div id="asidepart">
@@ -320,6 +321,15 @@ $(document).ready(function(){
 
 
 
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'null', 'null');  
+ga('send', 'pageview');
+</script>
 
 
   </body>
