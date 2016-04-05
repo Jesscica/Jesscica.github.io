@@ -10,9 +10,7 @@
     <meta name="author" content="Jesscica">
     
     <meta name="description" content="确认服务器端
-1. 客户端：clientHelloClient hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。
-　　(1)Version(版本)：客户端能够用的SSL最高版本。
-　　(2)Random(随机">
+1. 客户端：clientHelloClient hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。http://pic002.cnblogs.com/images/2012/38542/2012">
     
     
     
@@ -76,7 +74,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-04-05T07:42:11.000Z" itemprop="datePublished">2016-04-05</time>
-    Updated:<time datetime="2016-04-05T12:12:31.000Z" itemprop="dateModified">2016-04-05</time>
+    Updated:<time datetime="2016-04-05T12:14:30.000Z" itemprop="dateModified">2016-04-05</time>
     
   </p>
 </header>
@@ -89,7 +87,7 @@
 		</div>
 		
 		<h3 id="u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><a href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF" class="headerlink" title="确认服务器端"></a>确认服务器端</h3><hr>
-<h4 id="1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><a href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello" class="headerlink" title="1. 客户端：clientHello"></a>1. 客户端：clientHello</h4><p>Client hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。<br><img src="/./images/1459835755839.jpg" alt="enter description here" title="1459835755839.jpg"></p>
+<h4 id="1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><a href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello" class="headerlink" title="1. 客户端：clientHello"></a>1. 客户端：clientHello</h4><p>Client hello消息包括Version，Random，Session id，Cipher suite，Compression method等信息。<br><a href="http://pic002.cnblogs.com/images/2012/38542/2012100612260747.png" target="_blank" rel="external">http://pic002.cnblogs.com/images/2012/38542/2012100612260747.png</a></p>
 <p>　　(1)Version(版本)：客户端能够用的SSL最高版本。</p>
 <p>　　(2)Random(随机值)：包含一个32位长的时间戳，以及一个由随机数产生器所产生的28字节长的数字。</p>
 <p>　　(3)Session ID(会话标识符)：不定长度的session识别码。如果Session ID字段填上任何非零的数值，就表示客户端想继续使用上一个SSL连接，并且更新此连接的参数，或者在目前的session产生一个新的连接。如果此字段的值为零，则表示客户端希望重新建立一个新的session，并且产生一个新的连接。</p>
