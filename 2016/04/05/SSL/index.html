@@ -38,7 +38,7 @@
 				<h1 class="site-name"><a href="/" title="welcome to my blog">welcome to my blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -51,7 +51,7 @@
 					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -75,7 +75,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-04-05T07:42:11.000Z" itemprop="datePublished">2016-04-05</time>
-    Updated:<time datetime="2016-04-05T12:34:51.000Z" itemprop="dateModified">2016-04-05</time>
+    更新日期:<time datetime="2016-04-05T12:34:51.000Z" itemprop="dateModified">2016-04-05</time>
     
   </p>
 </header>
@@ -83,7 +83,7 @@
 		
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目錄</strong>
 		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u8FD9_u4E24_u5929_u770B_u4E86_u4E00_u4E0B_u300A_u56FE_u89E3http_u300B_uFF0C_u7279_u522B_u840C__u4E0D_u8FC7ssl_u90A3_u5757_u8BB2_u7684_u6709_u70B9_u607C_u706B_uFF0C_u82B1_u4E86_u70B9_u65F6_u95F4_u7EC8_u4E8E_u641E_u5B8C_u4E86_u54C8_u54C8"><span class="toc-number">1.</span> <span class="toc-text">这两天看了一下《图解http》，特别萌 不过ssl那块讲的有点恼火，花了点时间终于搞完了哈哈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><span class="toc-number">1.1.</span> <span class="toc-text">确认服务器端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 客户端：clientHello</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-__u670D_u52A1_u5668_uFF1ASever_Hello"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 服务器：Sever Hello</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 服务器： Certificate报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-__u670D_u52A1_u5668_uFF1A_server_Hello_Done"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 服务器： server Hello Done</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u786E_u8BA4_u5BA2_u6237_u7AEF"><span class="toc-number">1.2.</span> <span class="toc-text">确认客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-__u5BA2_u6237_u7AEF_uFF1Aclient_key_change_u62A5_u6587"><span class="toc-number">1.2.1.</span> <span class="toc-text">5. 客户端：client key change报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-__u5BA2_u6237_u7AEF_uFF1AChange_Cipher_Spec_u62A5_u6587"><span class="toc-number">1.2.2.</span> <span class="toc-text">6. 客户端：Change Cipher Spec报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-__u5BA2_u6237_u7AEF_uFF1Afinished_u62A5_u6587"><span class="toc-number">1.2.3.</span> <span class="toc-text">7. 客户端：finished报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587"><span class="toc-number">1.2.4.</span> <span class="toc-text">8.服务器：Change Cipher Spec报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587"><span class="toc-number">1.2.5.</span> <span class="toc-text">9.服务器：finished报文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u603B_u7684_u6982_u8FF0"><span class="toc-number">1.3.</span> <span class="toc-text">总的概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSL_u8FDE_u63A5_u5B8C_u6210_u3002_u4ECE_u6B64_u5F00_u59CBhttp_u8BF7_u6C42_u3002"><span class="toc-number">1.4.</span> <span class="toc-text">SSL连接完成。从此开始http请求。</span></a></li></ol></li></ol>
 		</div>
 		
@@ -158,22 +158,22 @@
 
 	
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目錄</strong>
   <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u8FD9_u4E24_u5929_u770B_u4E86_u4E00_u4E0B_u300A_u56FE_u89E3http_u300B_uFF0C_u7279_u522B_u840C__u4E0D_u8FC7ssl_u90A3_u5757_u8BB2_u7684_u6709_u70B9_u607C_u706B_uFF0C_u82B1_u4E86_u70B9_u65F6_u95F4_u7EC8_u4E8E_u641E_u5B8C_u4E86_u54C8_u54C8"><span class="toc-number">1.</span> <span class="toc-text">这两天看了一下《图解http》，特别萌 不过ssl那块讲的有点恼火，花了点时间终于搞完了哈哈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u786E_u8BA4_u670D_u52A1_u5668_u7AEF"><span class="toc-number">1.1.</span> <span class="toc-text">确认服务器端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-__u5BA2_u6237_u7AEF_uFF1AclientHello"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 客户端：clientHello</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-__u670D_u52A1_u5668_uFF1ASever_Hello"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 服务器：Sever Hello</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-__u670D_u52A1_u5668_uFF1A_Certificate_u62A5_u6587"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 服务器： Certificate报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-__u670D_u52A1_u5668_uFF1A_server_Hello_Done"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 服务器： server Hello Done</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u786E_u8BA4_u5BA2_u6237_u7AEF"><span class="toc-number">1.2.</span> <span class="toc-text">确认客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-__u5BA2_u6237_u7AEF_uFF1Aclient_key_change_u62A5_u6587"><span class="toc-number">1.2.1.</span> <span class="toc-text">5. 客户端：client key change报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-__u5BA2_u6237_u7AEF_uFF1AChange_Cipher_Spec_u62A5_u6587"><span class="toc-number">1.2.2.</span> <span class="toc-text">6. 客户端：Change Cipher Spec报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-__u5BA2_u6237_u7AEF_uFF1Afinished_u62A5_u6587"><span class="toc-number">1.2.3.</span> <span class="toc-text">7. 客户端：finished报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-_u670D_u52A1_u5668_uFF1AChange_Cipher_Spec_u62A5_u6587"><span class="toc-number">1.2.4.</span> <span class="toc-text">8.服务器：Change Cipher Spec报文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-_u670D_u52A1_u5668_uFF1Afinished_u62A5_u6587"><span class="toc-number">1.2.5.</span> <span class="toc-text">9.服务器：finished报文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u603B_u7684_u6982_u8FF0"><span class="toc-number">1.3.</span> <span class="toc-text">总的概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSL_u8FDE_u63A5_u5B8C_u6210_u3002_u4ECE_u6B64_u5F00_u59CBhttp_u8BF7_u6C42_u3002"><span class="toc-number">1.4.</span> <span class="toc-text">SSL连接完成。从此开始http请求。</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">標簽</p>
 		<ul class="clearfix">
 		
 			<li><a href="/tags/HTTP-HTTPS-SSL/" title="HTTP,HTTPS,SSL">HTTP,HTTPS,SSL<sup>1</sup></a></li>
@@ -183,7 +183,7 @@
 
 
   <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS</a>
+	<a href="null" target="_blank" title="rss">RSS 訂閱</a>
 </div>
 
 </aside>
